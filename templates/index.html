@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Video Captioning</title>
+    <link rel="icon" href="../static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="static/styles.css" />
+</head>
+
+<body>
+    <header class="App-header">
+        <nav class="Navbar">
+            <div class="logo">
+                <img src="static/icon.png" alt="logo" />
+                <h2>VIDEO CAPTIONING</h2>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+        </nav>
+    <div class="container">
+        <div class="main-bar">
+            <div class="content">
+                <div class="drop-box" id="dropBox">
+                    <img src="static/upload.png" alt="upload" width="40px" />
+                    <p>Drag and drop a video file here or click to upload.</p>
+                </div>
+                <!--<form  action="/upload" method="post">-->
+                <input type="file" id="videoInput" accept="video/*" style="display: none;">
+                <div class="video-container">
+                    <video class="haha" id="videoPlayer" controls></video>
+                    <div class="buttons">
+                        <button id="newVideo">New Video</button>
+                        <button id="generateCap">Generate Caption</button>
+                    </div>
+                </div>
+                <!--</form>-->
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="caption-container">
+                <p id="captionText" class="captionText" style="font-weight: 500;">caption will appear here...</p>
+                <div class="loading-indicator" id="loadingIndicator" style="display:none;">
+                    <img src="../static/loading.gif" alt="Loading..." width="40px" height="40px" id="load"/>
+                </div>
+            </div>
+            <div class="time-taken">
+                <p style="font-weight:500;">Time taken:</p><p id="timeTaken">00.00</p><p>seconds</p>
+            </div>
+        </div>       
+    </div>
+
+    </header>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
